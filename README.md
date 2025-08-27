@@ -1,3 +1,5 @@
+<img width="1192" height="261" alt="rnaseq_pipeline_diagram" src="https://github.com/user-attachments/assets/600fe0a6-2f59-4780-a494-3ad9b5d72d6b" />
+
 # Bulk-RNA-seq-Analysis-Pipeline 🧬
 Welcome to the **Bulk RNA-seq Pipeline** – a clean, reproducible, and beginner-friendly workflow for processing RNA-seq data, starting from raw **SRA IDs** and ending with a **gene counts matrix** ready for downstream **differential expression analysis**.
 This repository contains a step-by-step pipeline for analyzing bulk RNA-seq data from the study by Guo et al., Nature Communications (2019) — GSE106305.
