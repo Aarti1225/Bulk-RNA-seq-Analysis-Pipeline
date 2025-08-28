@@ -1,0 +1,9 @@
+sample_name,condition,cell_line,replicate,srr_ids
+LNCaP_EmptyVector_Normoxia_rep1,Normoxia,LNCaP,1,"SRR7179504,SRR7179505,SRR7179506,SRR7179507"
+LNCaP_EmptyVector_Normoxia_rep2,Normoxia,LNCaP,2,"SRR7179508,SRR7179509,SRR7179510,SRR7179511"
+LNCaP_EmptyVector_Hypoxia_rep1,Hypoxia,LNCaP,1,"SRR7179520,SRR7179521,SRR7179522,SRR7179523"
+LNCaP_EmptyVector_Hypoxia_rep2,Hypoxia,LNCaP,2,"SRR7179524,SRR7179525,SRR7179526,SRR7179527"
+PC3_siCtrl_Normoxia_rep1,Normoxia,PC3,1,SRR7179536
+PC3_siCtrl_Normoxia_rep2,Normoxia,PC3,2,SRR7179537
+PC3_siCtrl_Hypoxia_rep1,Hypoxia,PC3,1,SRR7179540
+PC3_siCtrl_Hypoxia_rep2,Hypoxia,PC3,2,SRR7179541

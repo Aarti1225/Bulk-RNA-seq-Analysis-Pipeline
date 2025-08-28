@@ -1,0 +1,9 @@
+sample_name,condition,cell_line,replicate,fastq
+LNCAP_Normoxia_S1,Normoxia,LNCaP,1,LNCAP_Normoxia_S1.fastq.gz
+LNCAP_Normoxia_S2,Normoxia,LNCaP,2,LNCAP_Normoxia_S2.fastq.gz
+LNCAP_Hypoxia_S1,Hypoxia,LNCaP,1,LNCAP_Hypoxia_S1.fastq.gz
+LNCAP_Hypoxia_S2,Hypoxia,LNCaP,2,LNCAP_Hypoxia_S2.fastq.gz
+PC3_Normoxia_S1,Normoxia,PC3,1,PC3_Normoxia_S1.fastq.gz
+PC3_Normoxia_S2,Normoxia,PC3,2,PC3_Normoxia_S2.fastq.gz
+PC3_Hypoxia_S1,Hypoxia,PC3,1,PC3_Hypoxia_S1.fastq.gz
+PC3_Hypoxia_S2,Hypoxia,PC3,2,PC3_Hypoxia_S2.fastq.gz
