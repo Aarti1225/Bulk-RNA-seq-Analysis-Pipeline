@@ -99,7 +99,7 @@ for sra_id in sra_numbers:
     print(f"⏱ Download time for {sra_id}: {elapsed_min:.2f} minutes")
 
 for sra_id in sra_numbers:
-    sra_path = f"/home/smriti_baskworkspace/bulkrnaseq_tutorial/{sra_id}/{sra_id}.sra"
+    sra_path = f"/home/aarohi_baskworkspace/bulkrnaseq_tutorial/{sra_id}/{sra_id}.sra"
     print("\n=== Generating FASTQ for:", sra_id, "===")
     fastq_dump_cmd = (
         f"fastq-dump --outdir fastq --gzip --skip-technical "
@@ -335,7 +335,7 @@ echo "All files processed successfully at $(date)" | tee -a $LOGFILE
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "C:\\Users\\smriti\\Downloads\\jupyter\\Lib\\site-packages\\pandas\\core\\arrays\\masked.py:60: UserWarning: Pandas requires version '1.3.6' or newer of 'bottleneck' (version '1.3.5' currently installed).\n",
+      "C:\\Users\\aarohi\\Downloads\\jupyter\\Lib\\site-packages\\pandas\\core\\arrays\\masked.py:60: UserWarning: Pandas requires version '1.3.6' or newer of 'bottleneck' (version '1.3.5' currently installed).\n",
       "  from pandas.core import (\n"
      ]
     },
@@ -343,7 +343,7 @@ echo "All files processed successfully at $(date)" | tee -a $LOGFILE
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "Files found: ['C:/Users/smriti/Desktop/quants\\\\LNCAP_Hypoxia_S1_featurecounts.txt', 'C:/Users/smriti/Desktop/quants\\\\LNCAP_Hypoxia_S2_featurecounts.txt', 'C:/Users/smriti/Desktop/quants\\\\LNCAP_Normoxia_S1_featurecounts.txt', 'C:/Users/smriti/Desktop/quants\\\\LNCAP_Normoxia_S2_featurecounts.txt', 'C:/Users/smriti/Desktop/quants\\\\PC3_Hypoxia_S1_featurecounts.txt', 'C:/Users/smriti/Desktop/quants\\\\PC3_Hypoxia_S2_featurecounts.txt', 'C:/Users/smriti/Desktop/quants\\\\PC3_Normoxia_S1_featurecounts.txt', 'C:/Users/smriti/Desktop/quants\\\\PC3_Normoxia_S2_featurecounts.txt']\n",
+      "Files found: ['C:/Users/aarohi/Desktop/quants\\\\LNCAP_Hypoxia_S1_featurecounts.txt', 'C:/Users/aarohi/Desktop/quants\\\\LNCAP_Hypoxia_S2_featurecounts.txt', 'C:/Users/aarohi/Desktop/quants\\\\LNCAP_Normoxia_S1_featurecounts.txt', 'C:/Users/aarohi/Desktop/quants\\\\LNCAP_Normoxia_S2_featurecounts.txt', 'C:/Users/aarohi/Desktop/quants\\\\PC3_Hypoxia_S1_featurecounts.txt', 'C:/Users/aarohi/Desktop/quants\\\\PC3_Hypoxia_S2_featurecounts.txt', 'C:/Users/aarohi/Desktop/quants\\\\PC3_Normoxia_S1_featurecounts.txt', 'C:/Users/aarohi/Desktop/quants\\\\PC3_Normoxia_S2_featurecounts.txt']\n",
       "Completed LNCAP_Hypoxia_S1 | Rows: 78894 | Time: 0.02 min\n",
       "Completed LNCAP_Hypoxia_S2 | Rows: 78894 | Time: 0.02 min\n",
       "Completed LNCAP_Normoxia_S1 | Rows: 78894 | Time: 0.02 min\n",
@@ -354,7 +354,7 @@ echo "All files processed successfully at $(date)" | tee -a $LOGFILE
       "Completed PC3_Normoxia_S2 | Rows: 78894 | Time: 0.02 min\n",
       "\\All files processed!\n",
       "Merged matrix shape: (78894, 9)\n",
-      "Saved to: C:/Users/smriti/Desktop/quants\\GSE106305_counts_matrix.csv\n"
+      "Saved to: C:/Users/aarohi/Desktop/quants\\GSE106305_counts_matrix.csv\n"
      ]
     }
    ],
@@ -364,7 +364,7 @@ echo "All files processed successfully at $(date)" | tee -a $LOGFILE
     "import pandas as pd\n",
     "import time\n",
     "\n",
-    "path = \"C:/Users/smriti/Desktop/quants\"\n",
+    "path = \"C:/Users/aarohi/Desktop/quants\"\n",
     "files = glob.glob(os.path.join(path, \"*.txt\"))\n",
     "\n",
     "print(\"Files found:\", files)\n",
@@ -420,19 +420,20 @@ echo "All files processed successfully at $(date)" | tee -a $LOGFILE
  "nbformat_minor": 5
 }
 
-[featurecounts.sh](https://github.com/user-attachments/files/22005191/featurecounts.sh)
+[featurecounts.sh](https://github.com/user-attachments/files/22005191/featurecounts.sh)  
+
 #!/bin/bash
 
 # Go to your aligned reads folder
-cd /home/smriti_baskworkspace/bulkrnaseq_tutorial/alignedreads
+cd /home/aarohi/alignedreads
 
 # Loop over all BAM files
 for bam in *.bam; do
     start=$(date +%s)  # start time
 
     echo "Processing $bam ..."
-    featureCounts -s 0 -a /home/smriti_baskworkspace/bulkrnaseq_tutorial/Homo_sapiens.GRCh38.114.gtf \
-        -o /home/smriti_baskworkspace/bulkrnaseq_tutorial/quants/${bam%.bam}_featurecounts.txt \
+    featureCounts -s 0 -a /home/aarohi/Homo_sapiens.GRCh38.114.gtf \
+        -o /home/aarohi/quants/${bam%.bam}_featurecounts.txt \
         "$bam"
 
     end=$(date +%s)  # end time
